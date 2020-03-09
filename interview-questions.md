@@ -47,6 +47,6 @@ Answer the following questions. First, without external resources. Challenge you
 Research and define the following terms to the best of your ability.
 - RESTful routes: naming convention that provides mapping between HTTP verbs (get, post, put, delete, patch) to controller CRUD actions (create, read, update, delete). 
 - json: is a lightweight format for storing and transporting data. JSON is often used when data is sent from a server to a web page.
-- API:
-- Endpoints:
-- Strong params: 
+- API: Application Program Interface. helps us build software applications
+- Endpoints: Are where an API accesses the resources from a request to put together a response.
+- Strong params: is a DSL that restricts assigning request parameters to objects to only those permitted.

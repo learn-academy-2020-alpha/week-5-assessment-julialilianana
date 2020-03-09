@@ -42,21 +42,25 @@ var arrayOfWords = ["Apple", "Banana", "Plum", "Cherry", "Kiwi", "Peach"]
 // Expected output: "Apple" "Banana" "Peach"
 
 
-//functin that takes in an array of words
-// check to see if word conatins the letter a
-//push that word into a new array
-
-
+//functin that takes in an array of words called onlyA
 const onlyA = (array) => {
-    let i = 0
-    return array.filter(value => {
-        let currentWord = value.toLowerCase
-        currentWord.charAt(i).includes("A")
-    })
+//create a new array for the words with an "a"
+    let newArray =[]
+//loop through each string inside the array of words creating a new array for each word
+    for (let i=0; i < array.length; i++){
+        let wordArray = array[i].split("")
+//check each index of each word for an "a"
+            for (let i=0; i < wordArray.length; i++){  
+//if the word contains an "a" push that word to the new array
+                if (wordArray[i].toLowerCase() === "a"){
+                newArray.push(wordArray.join(""))
+                break
+                }
+            }
+    }
+    return newArray
 }
-
 console.log(onlyA(arrayOfWords));
-
 
 
 // --------------------3) Create a function that takes in an array of 5 numbers and determines whether or not the array is a “full house”. A full house is one pair and one three of a kind.
